@@ -1,0 +1,74 @@
+@keyframes speck-button {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+.static-panel {
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .touch-device {
+    display: block;
+  }
+
+  .desctop-device {
+    display: none;
+  }
+}
+
+.speaker-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 150;
+  padding: 10px;
+
+  svg {
+    pointer-events: none;
+    display: block;
+
+    #path1 {
+      animation: speck-button 2s infinite;
+    }
+
+    #path2 {
+      animation: speck-button 2s infinite;
+      animation-delay: 0.333s;
+    }
+
+    #path3 {
+      animation: speck-button 2s infinite;
+      animation-delay: 0.666s;
+    }
+  }
+}
+
+.mute {
+  svg {
+
+    #path1,
+    #path2,
+    #path3 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .static-panel {
+    width: calc(100% - 40px);
+    bottom: 10px;
+    top: auto;
+  }
+}

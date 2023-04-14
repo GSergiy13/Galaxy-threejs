@@ -1,0 +1,128 @@
+// @keyframes shakeY {
+//   0%,
+//   to {
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//   }
+
+//   10%,
+//   30%,
+//   50%,
+//   70%,
+//   90% {
+//     -webkit-transform: translate3d(0, -3px, 0);
+//     transform: translate3d(0, -3px, 0);
+//   }
+
+//   20%,
+//   40%,
+//   60%,
+//   80% {
+//     -webkit-transform: translate3d(0, 3px, 0);
+//     transform: translate3d(0, 3px, 0);
+//   }
+// }
+
+@keyframes loader {
+  0% {
+    background-position: 50% 50%;
+  }
+  25% {
+    background-position: 17% 83%;
+  }
+  50% {
+    background-position: 33% 1%;
+  }
+  75% {
+    background-position: 72% 89%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 4px;
+  }
+  40% {
+    opacity: 1;
+    height: 8px;
+  }
+  80% {
+    transform: translate(0, 20px);
+    height: 8px;
+    opacity: 0;
+  }
+  100% {
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    background: transparent;
+  }
+  50% {
+    background: #fff;
+  }
+}
+
+@keyframes sequence-x {
+  0% {
+    // transform: translate(5px, 50px) rotate(-10deg) scale(1);
+    transform: translate(5px, 50px) rotate3d(0, 0, 1, -10deg) scale(1);
+  }
+  25% {
+    // transform: translate(0, 40px) rotate(-30deg) scale(0.8);
+    transform: translate(0, 40px) rotate3d(-1, 0, 1, -30deg) scale(0.9);
+  }
+  50% {
+    transform: translate(0, 40px) rotate3d(-1, 0, 1, -30deg) scale(0.9);
+  }
+  60% {
+    transform: translate(5px, 0) rotate3d(-1, 0, -1, 5deg) scale(0.9);
+  }
+  100% {
+    transform: translate(5px, 50px) rotate3d(0, 0, 1, -10deg) scale(1);
+  }
+}
+
+//title
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(255, 255, 255, 1);
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}

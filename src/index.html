@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Опис в поісковику..." />
+  <meta name="keywords" content="Ключові слова поска" />
+  <title>
+    ThreeJs - galaxy
+  </title>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/hack" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;700&family=Exo+2:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <!-- <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" /> -->
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+
+  <div class="blind"></div>
+
+  <div style="height: 100vh;" class="preloader-container">
+    <div class="data"></div>
+    <div class="preloader-1">
+
+      <div>Loading</div>
+
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+      <span class="line line-4"></span>
+      <span class="line line-5"></span>
+      <span class="line line-6"></span>
+      <span class="line line-7"></span>
+      <span class="line line-8"></span>
+      <span class="line line-9"></span>
+    </div>
+  </div>
+
+  <!-- Header mnu -->
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="navigate-bar">
+
+          <div class="navigation__btn cursor-pointer">
+            <div class="navigation__btn-line"></div>
+            <div class="navigation__btn-line"></div>
+          </div>
+
+          <div class="networks">
+            <a class="networks__links cursor-pointer" href="#">
+              <img src="img/networks/networks-3.svg" alt="" class="networks__liks-icon">
+            </a>
+            <a class="networks__links cursor-pointer" href="#">
+              <img src="img/networks/networks-1.svg" alt="" class="networks__liks-icon">
+            </a>
+            <a class="networks__links cursor-pointer" href="#">
+              <img src="img/networks/networks-2.svg" alt="" class="networks__liks-icon">
+            </a>
+          </div>
+
+        </div>
+        <div class="logo">
+          <a href="#">
+            logo
+          </a>
+        </div>
+
+        <div class="authorization">
+          <a class="authorization-in authorization__btn cursor-pointer" href="#">Авторизація</a>
+          <a class="authorization-registration authorization__btn cursor-pointer" href="#">Реєстрація</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navigation">
+    <div class="navigation__wrapper">
+      <div class="navigation-pages">
+
+        <div class="authorization">
+          <a class="authorization-in authorization__btn cursor-pointer" href="#">Вход</a>
+          <a class="authorization-registration authorization__btn cursor-pointer" href="#">Регистрация</a>
+        </div>
+
+        <img class="navigation-pages__close cursor-pointer" src="img/close-btn.svg" alt="close-icon">
+        <div class="navigation-pages__wrapper">
+          <a class="navigation-pages__link  cursor-pointer" href="#">
+            <img class="navigation-pages__link-icon" src="img/menu/home.svg" alt="home">
+            <span class="navigation-pages__link-text">Посилання №1</span>
+          </a>
+          <a class="navigation-pages__link cursor-pointer  " href="./faq/">
+            <img class="navigation-pages__link-icon" src="img/menu/faq.svg" alt="home">
+            <span class="navigation-pages__link-text">Посилання №2</span>
+          </a>
+          <a class="navigation-pages__link active cursor-pointer" href="./">
+            <img class="navigation-pages__link-icon" src="img/menu/ecosystem.svg" alt="home">
+            <span class="navigation-pages__link-text">Посилання №3</span>
+          </a>
+          <a class="navigation-pages__link cursor-pointer  " href="./products/">
+            <img class="navigation-pages__link-icon" src="img/menu/backpack.svg" alt="home">
+            <span class="navigation-pages__link-text">Посилання №1</span>
+          </a>
+        </div>
+      </div>
+      <div class="navigation-planets">
+        <div class="navigation-planets__wrapper">
+          <h2 class="navigation-planets__title">
+           ThreeJs
+          </h2>
+          <ul class="navigation-planets__list"></ul>
+        </div>
+      </div>
+      <div class="navigation-space">
+        <div class="navigation-space__links">
+          <div class="navigation-space__links-wrapper">
+            <a class="navigation-space__link cursor-pointer  " href="./wallet/">Space #1</a>
+            <a class="navigation-space__link cursor-pointer  " href="./finance/">Space #2</a>
+            <a class="navigation-space__link cursor-pointer  " href="./chain/">Space #3</a>
+            <a class="navigation-space__link cursor-pointer  " href="./space/">Space #4</a>
+          </div>
+        </div>
+
+        <div class="networks">
+          <a class="networks__links cursor-pointer" href="#">
+            <img src="img/networks/networks-3.svg" alt="" class="networks__liks-icon">
+          </a>
+          <a class="networks__links cursor-pointer" href="#">
+            <img src="img/networks/networks-1.svg" alt="" class="networks__liks-icon">
+          </a>
+          <a class="networks__links cursor-pointer" href="#">
+            <img src="img/networks/networks-2.svg" alt="" class="networks__liks-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Space -->
+  <div class="scroll-container">
+    <div id="custom_cursor"></div>
+
+    <div class="animation-main-container">
+      <div style="height: 100vh; display: none" class="preloader-container">
+        <div class="data"></div>
+        <div class="preloader-1">
+          <div>Loading</div>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+          <span class="line line-4"></span>
+          <span class="line line-5"></span>
+          <span class="line line-6"></span>
+          <span class="line line-7"></span>
+          <span class="line line-8"></span>
+          <span class="line line-9"></span>
+        </div>
+      </div>
+
+      <div class="scroll-info info">
+        <div class="scrolldown">
+          <div class="chevrons">
+            <div class="chevrondown"></div>
+            <div class="chevrondown"></div>
+          </div>
+        </div>
+        <div>Scroll down</div>
+      </div>
+
+      <div class="swipe-info info">
+        <img src="./img/scroll-info-cursor.svg" alt="" />
+      </div>
+
+      <div class="text-discription-container  text-discription-container-bg">
+        <div class="section-item-description" direction="top">
+          <svg class="main-title" viewBox="0 0 1320 300">
+            <text x="50%" y="50%" dy=".65em" text-anchor="middle">
+              Еcosystem
+            </text>
+          </svg>
+          <svg class="subtitle" viewBox="0 0 1320 300">
+            <text x="50%" y="50%" dy=".65em" text-anchor="middle">
+              galaxy
+            </text>
+          </svg>
+        </div>
+
+        <div class="section-item-description" direction="top"></div>
+
+        <div class="section-item-description section-item-description-left" direction="left">
+          <div class="section-item-description__top">
+            <img src="./img/star.svg" alt="star icon" />
+          </div>
+          <div class="section-item-description__bottom">
+            <img src="./img/description-left.svg" alt="description image" />
+            <div class="section-item-description__bottom-text">
+              <div class="title-container">
+                <h2>Planets #1</h2>
+              </div>
+              <div class="text-container">
+                <p class="writing-animation">
+                  Зараз космос – це все, що існує за межею земної атмосфери. Таке поняття космічного простору припускає його нескінченність.
+                </p>
+              </div>
+            </div>
+            <div class="link-button-container">
+              <a class="main-button cursor-pointer" href="page-2.html">Детальніше</a><a
+                class="main-button main-button-close cursor-pointer">Назад</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-item-description section-item-description-right" direction="right">
+          <div class="section-item-description__top">
+            <img src="./img/star.svg" alt="star icon" />
+          </div>
+          <div class="section-item-description__bottom">
+            <img src="./img/description-right.svg" alt="description image" />
+            <div class="section-item-description__bottom-text">
+              <div class="title-container">
+                <h2>Planets #2</h2>
+              </div>
+              <div class="text-container">
+                <p class="writing-animation">
+                    Зараз космос – це все, що існує за межею земної атмосфери. Таке поняття космічного простору припускає його нескінченність.
+                </p>
+              </div>
+            </div>
+            <div class="link-button-container">
+              <a class="main-button cursor-pointer" href="./finance/">Подробнее</a><a
+                class="main-button main-button-close cursor-pointer">Назад</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-item-description section-item-description-left" direction="left">
+          <div class="section-item-description__top">
+            <img src="./img/star.svg" alt="star icon" />
+          </div>
+          <div class="section-item-description__bottom">
+            <img src="./img/description-left.svg" alt="description image" />
+            <div class="section-item-description__bottom-text">
+              <div class="title-container">
+                <h2>Planets #3</h2>
+              </div>
+              <div class="text-container">
+                <p class="writing-animation">
+                  <span>сообщество осознанных инвесторов экосистемы Amir
+                    Capital</span>
+                </p>
+              </div>
+            </div>
+            <div class="link-button-container">
+              <a class="main-button cursor-pointer" href="./space/">Детальніше</a><a
+                class="main-button main-button-close cursor-pointer">Назад</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-item-description section-item-description-left" direction="left">
+          <div class="section-item-description__top">
+            <img src="./img/star.svg" alt="star icon" />
+          </div>
+          <div class="section-item-description__bottom">
+            <img src="./img/description-left.svg" alt="description image" />
+            <div class="section-item-description__bottom-text">
+              <div class="title-container">
+                <h2>Planets #4</h2>
+              </div>
+              <div class="text-container">
+                <p class="writing-animation">
+                    Зараз космос – це все, що існує за межею земної атмосфери. Таке поняття космічного простору припускає його нескінченність.
+                </p>
+              </div>
+            </div>
+            <div class="link-button-container">
+              <a class="main-button cursor-pointer" href="./chain/">Детальніше</a><a
+                class="main-button main-button-close cursor-pointer">Назад</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <canvas class="texture"></canvas>
+      <div class="main-container"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

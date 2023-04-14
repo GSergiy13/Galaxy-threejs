@@ -1,0 +1,226 @@
+@import "styles/keyframes.scss";
+@import "styles/default.scss";
+@import "styles/cursor.scss";
+@import "styles/panels.scss";
+@import "styles/speakerButton.scss";
+@import "styles/header.scss";
+
+/*# sourceMappingURL=main.css.map*/
+
+.blind {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 99999;
+    transform: translateY(100%);
+    transition: transform 1.5s;
+}
+
+.blind.active {
+    transform: translateY(0%);
+}
+
+.back-main {
+    width: 97%;
+    margin-top: 20px;
+}
+
+.back-global {
+    position: fixed;
+    left: 15px;
+    bottom: 45px;
+    z-index: 100;
+    width: fit-content;
+    max-width: 200px;
+
+    &::after {
+        content: "Amir Capital";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: max-content;
+        height: auto;
+        transition: all 0.5s;
+        transform: translate(90%, -50%);
+        opacity: 0;
+        color: #fff;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__line {
+        display: block;
+        width: 100%;
+        max-width: 35px;
+        margin-right: 10px;
+        transition: all 0.5s;
+    }
+
+    &__planet {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 50px;
+        box-shadow: 0px 0px 4px 3px #ffffff78;
+        border-radius: 50%;
+        transition: all 0.5s;
+        animation: 20s linear 0s normal none infinite running rot;
+    }
+
+    &:hover {
+        .back-global__planet {
+            box-shadow: 0px 0px 8px 5px #ffffff78;
+        }
+
+        .back-global__line {
+            transform: translateX(-5px);
+        }
+
+        &::after {
+            transform: translate(110%, -50%);
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+body {
+    background: #000;
+    min-height: 100vh;
+}
+
+.preloader-container {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    height: 0;
+    z-index: 1999;
+    background: #000;
+}
+
+.preloader-1 {
+    width: 66px;
+    height: 12px;
+}
+
+.preloader-2 {
+    margin: 120px auto 0;
+}
+
+.preloader-container div {
+    color: #fff;
+    margin: 5px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.preloader-1 .line {
+    width: 1px;
+    height: 12px;
+    background: #fff;
+    margin: 0 1px;
+    display: inline-block;
+    animation: opacity-1 1000ms infinite ease-in-out;
+}
+
+.preloader-2 .line {
+    width: 1px;
+    height: 12px;
+    background: #fff;
+    margin: 0 1px;
+    display: inline-block;
+    animation: opacity-2 1000ms infinite ease-in-out;
+}
+
+.preloader-1 .line-1,
+.preloader-2 .line-1 {
+    animation-delay: 800ms;
+}
+
+.preloader-1 .line-2,
+.preloader-2 .line-2 {
+    animation-delay: 600ms;
+}
+
+.preloader-1 .line-3,
+.preloader-2 .line-3 {
+    animation-delay: 400ms;
+}
+
+.preloader-1 .line-4,
+.preloader-2 .line-4 {
+    animation-delay: 200ms;
+}
+
+.preloader-1 .line-6,
+.preloader-2 .line-6 {
+    animation-delay: 200ms;
+}
+
+.preloader-1 .line-7,
+.preloader-2 .line-7 {
+    animation-delay: 400ms;
+}
+
+.preloader-1 .line-8,
+.preloader-2 .line-8 {
+    animation-delay: 600ms;
+}
+
+.preloader-1 .line-9,
+.preloader-2 .line-9 {
+    animation-delay: 800ms;
+}
+
+@keyframes opacity-1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-2 {
+    0% {
+        opacity: 1;
+        height: 15px;
+    }
+
+    50% {
+        opacity: 0;
+        height: 12px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 15px;
+    }
+}
